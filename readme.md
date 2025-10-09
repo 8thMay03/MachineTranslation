@@ -30,34 +30,7 @@ dựa trên kiến trúc **Transformer (MarianMT)** sử dụng thư viện **Hu
 
 ---
 
-## ⚙️ 3. Cấu trúc thư mục
-MachineTranslation/
-│
-├── src/
-│ ├── train.py # Script huấn luyện
-│ ├── inference.py # Script suy luận
-│ ├── utils.py # (tuỳ chọn) các hàm phụ trợ
-│
-├── data/
-│ ├── train.en # Dữ liệu tiếng Anh
-│ ├── train.vi # Dữ liệu tiếng Việt
-│ ├── val.en
-│ ├── val.vi
-│
-├── checkpoints/ # Lưu checkpoint sau mỗi bước huấn luyện
-│ ├── checkpoint-49000/
-│ ├── checkpoint-49500/
-│ ├── checkpoint-49995/
-│ └── ... + model cuối cùng
-│
-├── out/ # (tùy chọn) Model đã chọn để inference
-│
-├── requirements.txt # Danh sách thư viện cần cài
-└── README.md # File hướng dẫn
-
----
-
-## 🧩 4. Cài đặt môi trường
+## 🧩 3. Cài đặt môi trường
 
 ### Yêu cầu hệ thống
 - Python ≥ 3.9  
