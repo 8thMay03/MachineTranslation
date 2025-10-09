@@ -1,0 +1,23 @@
+# Core deep learning and transformers
+torch>=2.3.0
+transformers>=5.0.0
+datasets>=3.0.0
+evaluate>=0.4.0
+sentencepiece>=0.2.0
+sacremoses>=0.1.1
+sacrebleu>=2.4.0
+accelerate>=0.34.0
+
+# Tokenization and text preprocessing
+protobuf>=4.25.3
+regex
+tqdm
+
+# Optional: visualization and logging
+tensorboard>=2.17.0
+
+# GPU & CUDA support (install correct version for your system)
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+# Optional but recommended for Jupyter usage
+ipykernel
