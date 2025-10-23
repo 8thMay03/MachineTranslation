@@ -1,6 +1,6 @@
 from inference import Translator
 
-translator = Translator('../checkpoints')
+translator = Translator('../checkpoints/checkpoint-21000')
 
 while True:
     text = input("Enter text: ")

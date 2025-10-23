@@ -34,15 +34,15 @@ def preprocess_function(examples, tokenizer, src_lang="en", tgt_lang="vi", max_s
     return model_inputs
 
 class Args:
-    train_src = "../data/raw/train.en"
-    train_tgt = "../data/raw/train.vi"
-    val_src = "../data/raw/validation.en"
-    val_tgt = "../data/raw/validation.vi"
+    train_src = r"D:\Datasets\PhoMT\detokenization\train\train.en"
+    train_tgt = r"D:\Datasets\PhoMT\detokenization\train\train.vi"
+    val_src = r"D:\Datasets\PhoMT\detokenization\dev\dev.en"
+    val_tgt = r"D:\Datasets\PhoMT\detokenization\dev\dev.vi"
     output_dir = "../checkpoints"
-    model_name = "Helsinki-NLP/opus-mt-en-vi"
+    model_name = "../checkpoints/checkpoint-49995"
     per_device_train_batch_size = 8
     per_device_eval_batch_size = 8
-    num_train_epochs = 3
+    num_train_epochs = 1
     learning_rate = 5e-5
 
 def main():
@@ -86,7 +86,7 @@ def main():
         per_device_train_batch_size=args.per_device_train_batch_size,
         per_device_eval_batch_size=args.per_device_eval_batch_size,
         weight_decay=0.01,
-        save_total_limit=3,
+        save_total_limit=None,
         num_train_epochs=args.num_train_epochs,
         predict_with_generate=True,
         fp16=True if os.getenv("USE_FP16", "1")=="1" else False,

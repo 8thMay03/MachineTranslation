@@ -3,9 +3,9 @@ import os
 
 def load_parallel_text(src_file, tgt_file, src_lang="en", tgt_lang="vi"):
     with open(src_file, encoding='utf-8') as f:
-        src_lines = [l.strip() for l in f.readlines()]
+        src_lines = [l.strip().lower() for l in f.readlines()]
     with open(tgt_file, encoding='utf-8') as f:
-        tgt_lines = [l.strip() for l in f.readlines()]
+        tgt_lines = [l.strip().lower() for l in f.readlines()]
     assert len(src_lines) == len(tgt_lines)
     data = {"translation": [{src_lang: s, tgt_lang: t} for s, t in zip(src_lines, tgt_lines)]}
     return Dataset.from_dict(data)
